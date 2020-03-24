@@ -1,3 +1,9 @@
+# Mandelbrot Set
+# Author: Lisa Carpenter
+# Run in Python 2
+
+'''This script generates the fractal pattern known as the Mandelbrot set.  The set displays characteristics of the set of complex, quadratic polynomials of the form f(z) = z^2 + c.  For each value of c, the sequence [0, f(0), f(f(0)), f(f(f(0)))...] is generated.  If this sequence does not diverge, the value of c is plotted.'''
+
 from pylab import *
 
 N = 200

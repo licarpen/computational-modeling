@@ -2,13 +2,7 @@
 # File: pi.py
 # Author: Lisa Carpenter
 
-# Abstract:  This program computes the value of pi to within 3 decimal
-# places.  The method used will be to calculate the perimeters of two polygons,
-# one polygon circumscribed about the circle and the other inscribed in the circle.  
-# The number of sides on the two polygons is increased until the difference between 
-# the two values is less than 1.0E-4, giving a lower and upper bound for pi. A list 
-# of values will be generated as well, using the % function to ensure consistency and 
-# equal column widths. 
+'''Abstract:  This program computes the value of pi to within 3 decimal places.  The method used will be to calculate the perimeters of two polygons, one polygon circumscribed about the circle and the other inscribed in the circle. The number of sides on the two polygons is increased until the difference between the two values is less than 1.0E-4, giving a lower and upper bound for pi. A list of values will be generated as well, using the % function to ensure consistency and  equal column widths.'''
 
 import math
 
