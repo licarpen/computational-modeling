@@ -1,6 +1,7 @@
 import pi from '../assets/pi.png';
 import mandelbrot from '../assets/mandelbrot.png';
-import radioactive from '../assets/radioactive.png';
+import radioactive_euler from '../assets/radioactive_euler.png';
+import radioactive_rk from '../assets/radioactive_rk.png';
 
 export const models = [
   {
@@ -16,9 +17,15 @@ export const models = [
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/mandelbrot.py'
   },
   {
-    title: 'Euler Method Error for Radioactive Decay',
-    image: radioactive,
+    title: 'Radioactive Decay Euler Method Error',
+    image: radioactive_euler,
     description: 'An analytical solution for radioactive decay is well known and can be used to determine the number of atoms left in a radioactive mass after a period of time. This script models the error in the Euler method as a function of the time step (dt) used in the Euler approach. Error as a function of dt is plotted by comparing the difference between the numerical values and each analytical value to the time step used.  In analyzing the plot of error versus dt, it appears that error as a function of dt is linear.  The error per step is actually dt^2. However, throughout the entire Euler calculation, t/dt time steps are used, and thus the error is proportional to the product of these two values - (dt^2) * t/dt =~ dt.  Thus, as time step increases, the error increases linearly as well.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/radioactive_euler.py'
+  },
+  {
+    title: '',
+    image: radioactive_rk,
+    description: 'An analytical solution for radioactive decay is well known and can be used to determine the number of atoms left in a radioactive mass after a period of time. This script uses the Euler-Cromer method for numerically calculating the error in radioactive decay number of atoms versus the time step.  The Euler-Cromer method differs from the well-known Euler method in that it uses the computed values of omega to compute the next iteration and uses a half-time step for more accuracy.  As can be seen, error increases quadratically as dt increases, but the accuracy of the model is much higher for low values of t.  Error is proportional to the order of the time step multiplied by t/dt.  Since we are keeping higher order terms, the error will be of order (dt)^3*t/dt =~ (dt)^2, which is why a quadratic correlation between error and time step is observed.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/radioactive_rk.py'
   }
 ];

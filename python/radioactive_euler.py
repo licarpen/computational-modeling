@@ -26,7 +26,7 @@ for k in range(0, numDt):
     numSteps = int(t / (dt[k]))
     N = zeros([numSteps])
 
-# initialize with 1000 atoms
+    # initialize with 1000 atoms
     N[0] = 1000
     for n in range(1, numSteps):
         # Euler method prediction of atoms remaining after time t
