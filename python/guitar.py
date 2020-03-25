@@ -1,7 +1,5 @@
-#Final Project
-#Name: Lisa Carpenter
-#Date: 12.01.2011
-#Filename: guitar.py
+# Displacement of Guitar String
+# Author: Lisa Carpenter
 
 '''Abstract: This script models the displacement of a string after it
 is plucked at 1/2 and 2/3 of the string length. Known equations for y 

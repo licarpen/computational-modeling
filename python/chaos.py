@@ -1,5 +1,5 @@
 # Chaotic Behavior of Pendula
-#Author: Lisa Carpenter
+# Author: Lisa Carpenter
 
 '''Abstract: A driven and damped pendulum will exhibit chaotic behavior if
 initial conditions are set appropriately. The chaotic behavior is investigated

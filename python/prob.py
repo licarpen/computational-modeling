@@ -1,8 +1,5 @@
-#Assignment #: 05
-#Question #: 02: Probability Distribution Functions
-#Name: Lisa Carpenter
-#Date: 11.08.2011
-#Filename: prob.py
+# Probability Distribution Functions
+# Name: Lisa Carpenter
 
 '''Abstract:This program uses inversion to generate random numbers that look
 like the function 1/(a+by)^n, where a = b = 1, n = 3.  The function that

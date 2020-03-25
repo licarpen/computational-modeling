@@ -1,8 +1,5 @@
-#Assignment Number: 04
-#Question Number: 02: Curve Fitting
-#Author: Lisa Carpenter
-#Date: 10.09.2011
-#File Name: quadreg.py
+# Quadratic Curve Fitting
+# Author: Lisa Carpenter
 
 '''Abstract:
 Abstract: quadreg.py is a program that will determine a quadratic fit to the 

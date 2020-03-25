@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
-#Assignment: 02
-#Question: 2: The Pyrochlore Lattice
-#Author: Lisa Carpenter
-#Date: September 13, 2011
+# Pyrochlore Lattice Model
+# Author: Lisa Carpenter
 
 '''Abstract:  This script models the structure of the Pyrochlore Lattice. 
 This is done by defining a set of arrays representing basis vectors for both 
