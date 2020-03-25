@@ -1,6 +1,5 @@
 # Title: Logistic Bifurcation Diagram
 # Author: Lisa Carpenter
-# File Name: logistic.py
 
 '''Abstract:This program displays a bifurcation diagram mapping the 
 logistic equation against the parameter mu. The logistic equation is 
