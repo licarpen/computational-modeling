@@ -1,52 +1,39 @@
-#File Name: knuckleball.py
-#Assignment: 03
-#Problem: 2: The Knuckleball
-#Author: Lisa Carpenter
-#Date: 09.21.2011
+# Title: Density of Knuckleball Placement
+# Author: Lisa Carpenter
 
-'''Abstract:The knuckleball.py program will display a colorful spectral-map
-indicative of knuckleball pitch spatial coordinates at the batter.  This will be
-accomplished by using Newtonian Mechanics to describe the trajectory and using
-Euler method to iterate through time steps to determine the the placement in
-the z and y directions.  The final data will be stored in a 10 x 10 array,
-depicting the batter's spatial array, i.e. strike zone.  This will be
-accomplished by taking the spatial coordinate and translating it into an integer
-between 1 and 10, representing a row or column index in the array. A histogram
-will show the probability that a knuckleball will strike a particular box the size
-of a baseball.  
+'''Abstract: A knuckleball is a pitch thrown in baseball that minimizes spin on
+the ball, resulting in an erratic trajectory.  This script models a knuckleball 
+with a spectral map showing probabilistic spatial coordinates when the ball reaches
+the batter, i.e. the strike zone.  This is accomplished by using Newtonian Mechanics 
+to describe the trajectory and using the Euler method to iterate through time steps 
+to determine the placement in the z and y directions. A histogram (not shown) displays
+the probability that a knuckleball will strike a particular box the size of a baseball.
 '''
+
 from pylab import *
 import random
 
-#Define function for the lateral force on the knuckleball
+# lateral force on the knuckleball
 def Fknuck(theta):
     g = 9.8 # N/kg acceleration due to gravity
-    Fom = 0.5*g*(sin(4.0*theta) - 0.25*sin(8.0*theta) + \
-                0.08*sin(12.0*theta) - 0.025*sin(16.0*theta))
+    Fom = 0.5 * g * (sin(4.0 * theta) - 0.25 * sin(8.0 * theta) + \
+                0.08 * sin(12.0 * theta) - 0.025 * sin(16.0 * theta))
     return Fom
 
-# --------------------------------------------------------------------
-#Define function for the drag force on the baseball
+# drag force on the baseball
 def Fdrag(v):
     vd = 35.0 # m/s
     Delta = 5.0 # m/s
-    return 0.0039 + 0.0058/(1.0 + exp((v-vd)/Delta))
-
-# --------------------------------------------------------------------
+    return 0.0039 + 0.0058 / (1.0 + exp((v - vd) / Delta))
 
 # main program
 def main():
-
-# constants of nature
     g = 9.8 # N/kg
-# the time step
     dt = 0.01 # s
-# initialize arrays to put z and y position into after placement calculation
-    zPos = zeros([20000])
-    yPos = zeros([20000])
-#Iterate through 20000 random variables
-    for n in range(20000):
-#Initialize all variables and randomize variables
+    zPos = zeros([2000])
+    yPos = zeros([2000])
+    # compute 20000 knuckleball trajeectories
+    for n in range(2000):
         x = array([0.0])
         y = array([random.uniform(2.19,2.31)])
         z = array([0.0])
@@ -58,7 +45,7 @@ def main():
         vz = 0.0
         omega = random.uniform(0.15*2*pi,0.25*2*pi)
         theta = 2.0*pi*random.random()
-#Iterate spatial position while the ball travels to the batter, but not beyond
+        # iterate spatial position while the ball travels to the batter
         while x[-1] < 18:
             theta += omega * dt
             v = sqrt(vx**2 + vy**2 + vz**2)
@@ -71,40 +58,39 @@ def main():
             x = append(x,cx)
             y = append(y,cy)
             z = append(z,cz)
-#Shift z and y position into the array that represents the batter's strike zone
+        # shift z and y position into the array that represents the batter's strike zone
         zPos[n] = z[-1] + 0.457
-        yPos[n] = y[-1] 
-#Create array to represent the strike zone
+        yPos[n] = y[-1] - 0.914
     baseballArray = zeros([10,10])
-#Determine the length of one side of a box in the spatial array
     dz = 0.914/10
     dy = 0.914/10
-#Initialize variables to input y and z indeces
     zbox = 0
     ybox = 0
-#Determine for each knuckball trajectory the spatial placement in y and z.  
-    for k in range(20000):
-#Take only positions that lie within the strike zone.  
+    # determine the spatial placement in y and z for each knuckball trajectory
+    for k in range(2000):
+        # add positions that lie within the strike zone to array box
         if zPos[k] >= 0:
             if zPos[k] <= 0.914:
                 zbox = int(zPos[k]/dz)
-                if yPos[k] >= 0:
-                    if yPos[k] <= 0.914:
-#If the trajectory makes it to the strike zone, add it to the correct array box
-                        ybox = int(yPos[k]/dy)
-                        baseballArray[ybox,zbox] += 1
-#Normalize the array by dividing by the number of trials
-    baseballArray = baseballArray/20000
-#Plot a figure showing the spectral density of the strike zone.  
+                if yPos[k] <= 0:
+                    if yPos[k] >= -0.914:
+                        ybox = int(-1*yPos[k]/dy)
+                        baseballArray[zbox,ybox] += 1
+    # normalize
+    baseballArray = baseballArray/2000
+
     figure(1)
-    imshow(baseballArray, cmap = cm.spectral, origin = 'lower', interpolation = 'nearest', extent=[-1.5,1.5,0,3])
+    hist(baseballArray)
+    suptitle('Figure 1: Histogram of Knuckleball Placement')
+    xlabel('Bin Number')
+    ylabel('Probability') 
+    figure(2)
+    imshow(baseballArray, cmap = cm.spectral, origin = 'lower')
     colorbar()
     xlabel('Z-Axis (meters)')
     ylabel('Y-Axis (meters)')
-    suptitle('Figure 1: Density of Knuckleball Placement')
+    suptitle('Figure 2: Density of Knuckleball Placement')
     show()
-
-
         
 if __name__ == '__main__':
     main()

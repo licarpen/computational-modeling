@@ -1,50 +1,43 @@
-#Assignment Number: 04
-#Question Number: 03: Electric Potential Inside a Nested Prism: G&N 5.1
+# Title: Electric Potential Inside a Nested Prism
 #Author: Lisa Carpenter
-#Date: 10.09.2011
-#File Name: prism.py
 
-'''Abstract: This program will show the potential surrounding a square box
+'''Abstract: This script models the potential surrounding a hollow, square box
 of potential V = 1, with the potential set to 0 at distances far from the
-center of the box.  This will be shown using a spectral diagram.  The  method
-used to do this will be the Jacobi Method, which is a relaxation method for
-solving the 2nd order differential equation which describes the situation
-outlined above.  Laplace's equation allows us to relate the potential at a
-specific location to the potential of areas nearby.  By using a matrix to
-represent the potential at locations in the xy plane, the Jacobi method is used
-to iterate the potential at every space until the solution ceases to change.
-A small dv is used and the dv for each location is checked against its
-neighbors.  When dv has dropped below a suitable chosen eps value, the process
-is stopped and the potential is said to be relaxed.  The potential is then
-shown using a specrtral map.  
+center of the box.  The model makes use of the Jacobi method, which is a 
+relaxation method for solving the 2nd order differential equation which 
+describes the situation outlined above.  Laplace's equation allows us to 
+relate the potential at a specific location to the potential of areas nearby.  
+By using a matrix to represent the potential at locations in the xy plane, 
+the Jacobi method is used to iterate the potential at every space until the 
+solution ceases to change. A small dv is used and the dv for each location 
+is checked against its neighbors.  When dv has dropped below a chosen epsilon 
+value, the process is stopped and the potential is said to be relaxed. The 
+potential is then displayed using a spectral map.'''
 
-'''
 from pylab import *
 
-#Set the boundaries for the box in which the potential will be mapped
+# boundaries for the box in which the potential will be mapped
 X = 100
 Y = 100
-#Determine the indeces on the edges of the matrix
+# indeces on the edges of the matrix
 xf = X - 1
 yf = Y - 1
-#Set prism length and width to an even number
+# prism length and width (even number)
 P = 30
-#Create an array to represent the potential in the xy plane.  Set all entries
-#to 1
-V = ones([X,Y], dtype = float)
-#Use a for loop to set region outside of the box to a random initial value,
-#chosen here to be 0.5.  
-for i in range (1,X):
-    for j in range(1,Y):
-#Only change points outside of the box
-            if i < (X - P)/2 or i >= (X + P)/2 \
-               or j < (Y - P)/2 or j >= (Y + P)/2:
-                V[i,j] = 0.5
-#Set the boundaries of the entire region to be 0.
-V[0,:] = 0.0
-V[:,0] = 0.0
-V[xf,:] = 0.0
-V[:,yf] = 0.0
+# initialize array to represent the potential in the xy plane
+V = ones([X, Y], dtype = float)
+# region outside of box set to random initial value, chosen here to be 0.5.  
+for i in range (1, X):
+    for j in range(1, Y):
+        #only change points outside of the box
+        if i < (X - P) / 2 or i >= (X + P) / 2 \
+            or j < (Y - P) / 2 or j >= (Y + P) / 2:
+            V[i, j] = 0.5
+#S set the boundaries of the entire region to be 0.
+V[0, :] = 0.0
+V[:, 0] = 0.0
+V[xf, :] = 0.0
+V[:, yf] = 0.0
 #Choose a small value for epsilon (eps)
 eps = 0.05
 #Initialize dv to some number greater than 0.
