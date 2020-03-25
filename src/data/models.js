@@ -6,6 +6,7 @@ import prism from '../assets/prism.png';
 import chaos_pendula from '../assets/chaos_pendula.png';
 import knuckleball from '../assets/knuckleball.png';
 import quadrature from '../assets/quadtrature.png';
+import randomwalk from '../assets/randomwalk.png'
 
 export const models = [
   {
@@ -49,6 +50,12 @@ export const models = [
     image: radioactive_rk,
     description: 'An analytical solution for radioactive decay is well known and can be used to determine the number of atoms left in a radioactive mass after a period of time. This script uses the Euler-Cromer method for numerically calculating the error in radioactive decay number of atoms versus the time step.  The Euler-Cromer method differs from the well-known Euler method in that it uses the computed values of omega to compute the next iteration and uses a half-time step for more accuracy.  As can be seen, error increases quadratically as dt increases, but the accuracy of the model is much higher for low values of t.  Error is proportional to the order of the time step multiplied by t/dt.  Since we are keeping higher order terms, the error will be of order (dt)^3*t/dt =~ (dt)^2, which is why a quadratic correlation between error and time step is observed.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/radioactive_rk.py'
+  },
+  {
+    title: 'Random Walk in 1D',
+    image: randomwalk,
+    description: 'This script models a random walk in 1D.  L particles step 1 unit left or right at random, with equal probabilities of each.  Steps are repeated for each particle n times.  A periodic boundary condition is applied, upon which particles that hit the boundary are positioned at the opposite end of the boundary. A histogram displays the ending location of each particle with respect to the starting point. A 1D random walk is often used as a starting point to demonstrating gaussian distributions, the behavior of gas particles in a container (which is the foundation of thermodynamics), and brownian motion.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/probwalk.py'
   },
   {
     title: 'Integral Approximation Techniques',

@@ -2,7 +2,7 @@
 #Question #: 01: White Noise
 #Name: Lisa Carpenter
 #Date: 11.08.2011
-#Filename: box.py
+#Filename: noise.py
 
 '''Abstract:  This program will generate a white noise power spectrum
 using the Box-Muller method.  An array of 2^10 random numbers is generated and
