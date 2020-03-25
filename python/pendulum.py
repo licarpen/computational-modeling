@@ -1,8 +1,5 @@
-#Assignment Number: 03
-#Question Number: 03: The Dissipative Pendulum
-#Author: Lisa Carpenter
-#Filename: pendulum.py
-#Date: 09.27.2011
+# The Dissipative Pendulum
+# Author: Lisa Carpenter
 
 '''Abstract: The behavior of a damped pendulum will be investigated.  A
 pendulum subject to a frictional damping force has the potential to undergo

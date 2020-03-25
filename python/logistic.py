@@ -1,9 +1,12 @@
 # Title: Logistic Bifurcation Diagram
 # Author: Lisa Carpenter
-# File Name: logistic.py
 
 '''Abstract:This program displays a bifurcation diagram mapping the 
-logistic equation against the parameter mu. The logistic equation is defined iteravely as x_n+1 = mu * x_n (1 - x_n). For each value of mu, transient behavior of the logistic equation is eliminated and values of x_n are recorded. Chaos onset and period doubling are denoted on the diagram.'''
+logistic equation against the parameter mu. The logistic equation is 
+defined iteravely as x_n+1 = mu * x_n (1 - x_n). For each value of mu, 
+transient behavior of the logistic equation is eliminated and values 
+of x_n are recorded. Chaos onset and period doubling are denoted on the 
+diagram.'''
 
 import pylab as pl
 

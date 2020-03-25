@@ -6,6 +6,11 @@ import prism from '../assets/prism.png';
 import chaos_pendula from '../assets/chaos_pendula.png';
 import knuckleball from '../assets/knuckleball.png';
 import quadrature from '../assets/quadtrature.png';
+import randomwalk from '../assets/randomwalk.png';
+import guitar from '../assets/guitar.png';
+import noise from '../assets/noise.png';
+import pyro from '../assets/pyro.png';
+import logistic from '../assets/logistic.png';
 
 export const models = [
   {
@@ -33,6 +38,18 @@ export const models = [
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/mandelbrot.py'
   },
   {
+    title: 'Displacement of Guitar String',
+    image: guitar,
+    description: 'This script models the displacement of a string after it is plucked at 1/2 and 2/3 of the string length. Known equations for y displacement and velocity of a wave traveling on a string are used given parameters of string tension, density, initial displacement, and length. Frequency spectrum at 90% of string length is also generated (not shown). Fast Fourier Transforms are used to identify resultant frequencies.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/guitar.py'
+  },
+  {
+    title: 'Logistic Bifurcation Diagram',
+    image: logistic,
+    description: 'Abstract:This program displays a bifurcation diagram mapping the logistic equation against the parameter mu. The logistic equation is defined iteravely as x_n+1 = mu * x_n (1 - x_n). For each value of mu, transient behavior of the logistic equation is eliminated and values of x_n are recorded. Chaos onset and period doubling are denoted on the diagram.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/logistic.py'
+  },
+  {
     title: 'Archimedes\' Pi Approximation',
     image: pi,
     description: 'This script approximates the value of pi to 3 decimals using Archimedes\' method. The perimeters of two polygons are calculated, with one polygon circumscribed about a circle and the other inscribed in the same circle.  The outer perimeter is n * tan(theta/2.0), where theta is the inscribed angle in radians. The inner perimeter is defined as n * sin(theta/2.0).  As n increases, the difference between the two values will become less than 1.0E-4, resulting in pi to a precision of 3 decimals. The script prints a list of values using modulo to ensure consistency and equal column widths.',
@@ -51,9 +68,27 @@ export const models = [
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/radioactive_rk.py'
   },
   {
+    title: 'Random Walk in 1D',
+    image: randomwalk,
+    description: 'This script models a random walk in 1D.  L particles step 1 unit left or right at random, with equal probabilities of each.  Steps are repeated for each particle n times.  A periodic boundary condition is applied, upon which particles that hit the boundary are positioned at the opposite end of the boundary. A histogram displays the ending location of each particle with respect to the starting point. A 1D random walk is often used as a starting point to demonstrating gaussian distributions, the behavior of gas particles in a container (which is the foundation of thermodynamics), and brownian motion.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/probwalk.py'
+  },
+  {
     title: 'Integral Approximation Techniques',
     image: quadrature,
     description: 'This script calculates the integral from -1 to 1 of the fucntion f(x) = x^2/cosh(x) in three different ways.  Frist, a bruteforce Monte Carlo technique is used, generating random numbers (x_i) in the interval from -1 to 1 and summing N rectangles of height f(x_i) and width 2/N to approximate the integral. The second method approximates each interval as a trapezoid and uses the boundaries of the function as h_1 and h_2 of the trapezoid. Finally, importance sampling is used to flatten the function, eliminating random values of x_i via the rejection method for the function p(x) = 1/cosh(x). The remaining x_i values are used with bruteforce to approximate the integral. The integral estimations are calculated for several values of N and presented in a table. The error in the importance and bruteforce MC method increases as 1/sqrt(N), where N is the number of samples used to calculate the integral. This can be shown by graphing error versus 1/sqrt(N).  The resulting correlation appears linear. While the trapezoid method of integration results in a precise result with N = 100, the MC techniques scale better in higher dimensions and require less computation for increased accuracy.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/quadrature.py'
+  },
+  {
+    title: 'White Noise Generator',
+    image: noise,
+    description: 'This script generates a white noise power spectrum using the Box-Muller method.  An array of 2^10 random numbers is generated and treated like a time series.  FFT is used to compute the power spectrum of these values.  The Box-Muller method uses a Gaussian distribution with mean mu = 0 and sigma^2 = 1.  This probability distribution is then inverted to find the function from which to draw random numbers, which takes two values.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/noise.py'
+  },
+  {
+    title: 'Pyrochlore Lattice',
+    image: pyro,
+    description: 'This script models the structure of the Pyrochlore Lattice. This is done by defining a set of arrays representing basis vectors for both position in the coordinate system and position of the four atoms at each position.  While the points are generated, they are added to a 500*3 dimensional array.  The array is used to plot all of the atom positions in scatterplots showing views from the xy, yz, and zx planes.The data is written to a pyrochlore.dat file.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/pyro.py'
   }
 ];

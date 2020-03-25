@@ -1,8 +1,5 @@
-#Assignment #: 05
-#Question #: 04: Extra Credit:Computing the Value of "e"
-#Name: Lisa Carpenter
-#Date: 11.08.2011
-#Filename: eval.py
+# Approximation of e
+# Lisa Carpenter
 
 '''Abstract:  This program will estimate the value of "e" using a Monte Carlo
 technique.  The definition of e is the upper bound on the integral of 1/x
