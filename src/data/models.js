@@ -8,6 +8,7 @@ import knuckleball from '../assets/knuckleball.png';
 import quadrature from '../assets/quadtrature.png';
 import randomwalk from '../assets/randomwalk.png';
 import guitar from '../assets/guitar.png';
+import noise from '../assets/noise.png';
 
 export const models = [
   {
@@ -69,5 +70,11 @@ export const models = [
     image: quadrature,
     description: 'This script calculates the integral from -1 to 1 of the fucntion f(x) = x^2/cosh(x) in three different ways.  Frist, a bruteforce Monte Carlo technique is used, generating random numbers (x_i) in the interval from -1 to 1 and summing N rectangles of height f(x_i) and width 2/N to approximate the integral. The second method approximates each interval as a trapezoid and uses the boundaries of the function as h_1 and h_2 of the trapezoid. Finally, importance sampling is used to flatten the function, eliminating random values of x_i via the rejection method for the function p(x) = 1/cosh(x). The remaining x_i values are used with bruteforce to approximate the integral. The integral estimations are calculated for several values of N and presented in a table. The error in the importance and bruteforce MC method increases as 1/sqrt(N), where N is the number of samples used to calculate the integral. This can be shown by graphing error versus 1/sqrt(N).  The resulting correlation appears linear. While the trapezoid method of integration results in a precise result with N = 100, the MC techniques scale better in higher dimensions and require less computation for increased accuracy.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/quadrature.py'
+  },
+  {
+    title: 'White Noise Generator',
+    image: noise,
+    description: 'This script generates a white noise power spectrum using the Box-Muller method.  An array of 2^10 random numbers is generated and treated like a time series.  FFT is used to compute the power spectrum of these values.  The Box-Muller method uses a Gaussian distribution with mean mu = 0 and sigma^2 = 1.  This probability distribution is then inverted to find the function from which to draw random numbers, which takes two values.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/noise.py'
   }
 ];
