@@ -9,6 +9,8 @@ import quadrature from '../assets/quadtrature.png';
 import randomwalk from '../assets/randomwalk.png';
 import guitar from '../assets/guitar.png';
 import noise from '../assets/noise.png';
+import pyro from '../assets/pyro.png';
+import logistic from '../assets/logistic.png';
 
 export const models = [
   {
@@ -40,6 +42,12 @@ export const models = [
     image: guitar,
     description: 'This script models the displacement of a string after it is plucked at 1/2 and 2/3 of the string length. Known equations for y displacement and velocity of a wave traveling on a string are used given parameters of string tension, density, initial displacement, and length. Frequency spectrum at 90% of string length is also generated (not shown). Fast Fourier Transforms are used to identify resultant frequencies.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/guitar.py'
+  },
+  {
+    title: 'Logistic Bifurcation Diagram',
+    image: logistic,
+    description: 'Abstract:This program displays a bifurcation diagram mapping the logistic equation against the parameter mu. The logistic equation is defined iteravely as x_n+1 = mu * x_n (1 - x_n). For each value of mu, transient behavior of the logistic equation is eliminated and values of x_n are recorded. Chaos onset and period doubling are denoted on the diagram.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/logistic.py'
   },
   {
     title: 'Archimedes\' Pi Approximation',
@@ -76,5 +84,11 @@ export const models = [
     image: noise,
     description: 'This script generates a white noise power spectrum using the Box-Muller method.  An array of 2^10 random numbers is generated and treated like a time series.  FFT is used to compute the power spectrum of these values.  The Box-Muller method uses a Gaussian distribution with mean mu = 0 and sigma^2 = 1.  This probability distribution is then inverted to find the function from which to draw random numbers, which takes two values.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/noise.py'
+  },
+  {
+    title: 'Pyrochlore Lattice',
+    image: pyro,
+    description: 'This script models the structure of the Pyrochlore Lattice. This is done by defining a set of arrays representing basis vectors for both position in the coordinate system and position of the four atoms at each position.  While the points are generated, they are added to a 500*3 dimensional array.  The array is used to plot all of the atom positions in scatterplots showing views from the xy, yz, and zx planes.The data is written to a pyrochlore.dat file.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/pyro.py'
   }
 ];
