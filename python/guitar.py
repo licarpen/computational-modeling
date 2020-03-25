@@ -3,9 +3,12 @@
 #Date: 12.01.2011
 #Filename: guitar.py
 
-'''Abstract: This program simulates the displacement of a string after it
-is plucked.  See Poject Paper for further details.  
-
+'''Abstract: This script models the displacement of a string after it
+is plucked at 1/2 and 2/3 of the string length. Known equations for y 
+displacement and velocity of a wave traveling on a string are used given 
+parameters of string tension, density, initial displacement, and length. 
+Frequency spectrum at 90% of string length is also generated (not shown). 
+Fast Fourier Transforms are used to identify resultant frequencies. 
 '''
 
 from pylab import *

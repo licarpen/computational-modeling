@@ -6,7 +6,8 @@ import prism from '../assets/prism.png';
 import chaos_pendula from '../assets/chaos_pendula.png';
 import knuckleball from '../assets/knuckleball.png';
 import quadrature from '../assets/quadtrature.png';
-import randomwalk from '../assets/randomwalk.png'
+import randomwalk from '../assets/randomwalk.png';
+import guitar from '../assets/guitar.png';
 
 export const models = [
   {
@@ -32,6 +33,12 @@ export const models = [
     image: mandelbrot,
     description: 'This script generates the fractal pattern known as the Mandelbrot set.  The set displays characteristics of the set of complex, quadratic polynomials of the form f(z) = z^2 + c.  For each value of c, the sequence [0, f(0), f(f(0)), f(f(f(0)))...] is generated.  If this sequence does not diverge, the value of c is plotted.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/mandelbrot.py'
+  },
+  {
+    title: 'Displacement of Guitar String',
+    image: guitar,
+    description: 'This script models the displacement of a string after it is plucked at 1/2 and 2/3 of the string length. Known equations for y displacement and velocity of a wave traveling on a string are used given parameters of string tension, density, initial displacement, and length. Frequency spectrum at 90% of string length is also generated (not shown). Fast Fourier Transforms are used to identify resultant frequencies.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/guitar.py'
   },
   {
     title: 'Archimedes\' Pi Approximation',
