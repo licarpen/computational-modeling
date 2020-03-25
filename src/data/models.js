@@ -3,8 +3,9 @@ import mandelbrot from '../assets/mandelbrot.png';
 import radioactive_euler from '../assets/radioactive_euler.png';
 import radioactive_rk from '../assets/radioactive_rk.png';
 import prism from '../assets/prism.png';
-import chaos_pendula from '../assets/chaos_pendula';
-import knuckleball from '../assets/knuckleball';
+import chaos_pendula from '../assets/chaos_pendula.png';
+import knuckleball from '../assets/knuckleball.png';
+import quadrature from '../assets/quadtrature.png';
 
 export const models = [
   {
@@ -48,5 +49,11 @@ export const models = [
     image: radioactive_rk,
     description: 'An analytical solution for radioactive decay is well known and can be used to determine the number of atoms left in a radioactive mass after a period of time. This script uses the Euler-Cromer method for numerically calculating the error in radioactive decay number of atoms versus the time step.  The Euler-Cromer method differs from the well-known Euler method in that it uses the computed values of omega to compute the next iteration and uses a half-time step for more accuracy.  As can be seen, error increases quadratically as dt increases, but the accuracy of the model is much higher for low values of t.  Error is proportional to the order of the time step multiplied by t/dt.  Since we are keeping higher order terms, the error will be of order (dt)^3*t/dt =~ (dt)^2, which is why a quadratic correlation between error and time step is observed.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/radioactive_rk.py'
+  },
+  {
+    title: 'Integral Approximation Techniques',
+    image: quadrature,
+    description: 'This script calculates the integral from -1 to 1 of the fucntion f(x) = x^2/cosh(x) in three different ways.  Frist, a bruteforce Monte Carlo technique is used, generating random numbers (x_i) in the interval from -1 to 1 and summing N rectangles of height f(x_i) and width 2/N to approximate the integral. The second method approximates each interval as a trapezoid and uses the boundaries of the function as h_1 and h_2 of the trapezoid. Finally, importance sampling is used to flatten the function, eliminating random values of x_i via the rejection method for the function p(x) = 1/cosh(x). The remaining x_i values are used with bruteforce to approximate the integral. The integral estimations are calculated for several values of N and presented in a table. The error in the importance and bruteforce MC method increases as 1/sqrt(N), where N is the number of samples used to calculate the integral. This can be shown by graphing error versus 1/sqrt(N).  The resulting correlation appears linear. While the trapezoid method of integration results in a precise result with N = 100, the MC techniques scale better in higher dimensions and require less computation for increased accuracy.',
+    script: 'https://github.com/licarpen/computational-modeling/blob/master/python/quadrature.py'
   }
 ];
