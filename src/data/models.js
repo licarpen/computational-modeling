@@ -5,7 +5,7 @@ import radioactive_rk from '../assets/radioactive_rk.png';
 import prism from '../assets/prism.png';
 import chaos_pendula from '../assets/chaos_pendula.png';
 import knuckleball from '../assets/knuckleball.png';
-import quadrature from '../assets/quadtrature.png';
+import quadrature from '../assets/quadrature.png';
 import randomwalk from '../assets/randomwalk.png';
 import guitar from '../assets/guitar.png';
 import noise from '../assets/noise.png';

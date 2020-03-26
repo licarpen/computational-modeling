@@ -1,0 +1,31 @@
+body{
+  margin: auto;
+  padding-bottom: 3vw;
+  background: rgb(1, 122, 122);
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+  }
+
+  li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  
+  Link {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
