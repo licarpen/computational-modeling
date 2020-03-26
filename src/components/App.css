@@ -1,31 +1,31 @@
 body{
   margin: auto;
   padding-bottom: 3vw;
-  background: rgb(1, 122, 122);
+  background: rgb(41, 41, 41);
   h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    color: white;
+    color: black;
   }
 
   p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    color: white;
+    color: black;
   }
 
   h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    color: white;
+    color: black;
   }
 
   li {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
   }
   
   Link {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
   }
 }

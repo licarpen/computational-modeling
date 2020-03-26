@@ -12,30 +12,28 @@
 
   .title{
     font-size: 24px;
+    height: 75px;
   }
 
   .card{
     width: 300px;
-    height: 380px;
+    height: 320px;
     padding: 6px;
     padding-top: 15px;
     padding-bottom: 15px;
     margin: 10px;
-    border-radius: 1em;
-    border: solid 4px white;
+    background: whitesmoke;
     box-sizing: border-box;
   }
 
   .imgDiv{
-    height: 265px;
+    height: 200px;
     display: block;
     margin: auto;
     margin-bottom: 10px;
   }
 
   .card:hover{
-    border: solid 8px white;
-    margin-top: 6px;
     img{
       width: 260px; 
       padding: 0px;
@@ -48,17 +46,13 @@
   }
 
   img{
-    display: block;
+    display: flex;
+    align-items: center;
     margin: auto;
     width: 250px;
-    border-radius: 1.2em;
+    border-radius: 0.8em;
     padding: 10px;
     transition: width 0.4s;
-  }
-
-  .tech{
-    font-size: 18px;
-    font-weight: none;
   }
 
   @media screen and (min-width: 1320px){

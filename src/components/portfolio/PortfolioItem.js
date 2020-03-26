@@ -9,7 +9,7 @@ const PortfolioItem = ({ match }) => {
 
   return (
     <div className={styles.PortfolioItem}>
-      <h2>{title}</h2>
+      <h2 className={styles.title}>{title}</h2>
       <div className={styles.links}>
         <a href={script} target='_blank' rel='noopener noreferrer' >Code</a>
         <Link className={styles.Link} to={'/'}>Back</Link>
