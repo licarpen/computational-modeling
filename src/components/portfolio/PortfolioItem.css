@@ -69,7 +69,8 @@
       font-size: 5vw;
     }
     .links{
-      margin: 3vw;
+      margin-top: 3vw;
+      margin-bottom: 3vw;
     }
 
     a{
