@@ -1,18 +1,7 @@
 # Title: Error in Euler-Cromer Method for Radioactive Decay
 # Author: Lisa Carpenter
 
-'''Abstract: An analytical solution for radioactive decay is well known
-and can be used to determine the number of atoms left in a radioactive mass
-after a period of time. This script uses the Euler-Cromer method for 
-numerically calculating the error in radioactive decay number of atoms versus 
-the time step.  The Euler-Cromer method differs from the well-known Euler 
-method in that it uses the computed values of omega to compute the next 
-iteration and uses a half-time step for more accuracy.  As can be seen, 
-error increases quadratically as dt increases, but the accuracy of the model
-is much higher for low values of t.  Error is proportional to the order of 
-the time step multiplied by t/dt.  Since we are keeping higher order terms, 
-the error will be of order (dt)^3*t/dt =~ (dt)^2, which is why a quadratic 
-correlation between error and time step is observed.'''
+'''Abstract: An analytical solution for radioactive decay is well known and can be used to determine the number of atoms left in a radioactive mass after a period of time. This script uses the Euler-Cromer method for numerically calculating the error in radioactive decay number of atoms versus the time step.  The Euler-Cromer method differs from the well-known Euler method in that it uses the computed values of omega to compute the next iteration and uses a half-time step for more accuracy.  As can be seen, error increases quadratically as dt increases, but the accuracy of the model is much higher for low values of t.  Error is proportional to the order of the time step multiplied by t/dt.  Since we are keeping higher order terms, the error will be of order (dt)^3*t/dt =~ (dt)^2, which is why a quadratic correlation between error and time step is observed.'''
 
 from pylab import *
 
