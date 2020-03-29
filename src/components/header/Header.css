@@ -1,6 +1,6 @@
 .Header{
-  height: 14vw;
-
+  margin-bottom: 20px;
+  
   .title{
     color: white;
     font-size: 3.5vw;
@@ -20,20 +20,26 @@
     margin: auto;
   }
 
-  @media screen and (max-width: 600px){
-    height: 30vw;
+  .Link{
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 800px){
     .title{
-      font-size: 6vw;
-      margin-top: 5vw;
-      padding: 2vw;
+      width: 80%;
+      margin: auto;
+      font-size: 28px;
+      margin-top: 3vw;
+      padding: 3vw;
     }
     .author{
-      font-size: 4vw;
-      padding: 2vw;
+      font-size: 20px;
+      padding-top: 3vw;
+      padding-bottom: 3vw;
     }
     .description{
       width: 85%;
-      font-size: 3vw;
+      font-size: 14px;
     }
   }
 
