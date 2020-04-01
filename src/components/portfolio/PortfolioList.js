@@ -9,7 +9,7 @@ const PortfolioList = () => {
       <Link className={styles.Link} to={`/${item.title}`}>
         <h2 className={styles.title}>{item.title}</h2>
         <div className={styles.imgDiv}>
-          <img src={item.image}/>
+          <img src={item.imageSmall}/>
         </div>
       </Link>
     </li>
