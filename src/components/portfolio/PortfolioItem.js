@@ -13,7 +13,7 @@ const PortfolioItem = ({ match }) => {
       <div className={styles.links}>
         <a href={script} target='_blank' rel='noopener noreferrer' >Code</a>
       </div>
-      <img src={image}/>
+      <img src={image} alt={title} />
       <p className={styles.description}>{description}</p>
       <Link className={styles.Link} to={'/'}>Back</Link>
     </div>
