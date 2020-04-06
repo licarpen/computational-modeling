@@ -37,7 +37,7 @@ export const models = [
     title: 'Density of Knuckleball Placement',
     image: knuckleball,
     imageSmall: knuckleballSmall,
-    description: 'A knuckleball is a pitch thrown in baseball that minimizes spin on the ball, resulting in an erratic trajectory.  This script models a knuckleball with a spectral map showing probabilistic spatial coordinates for when the ball reaches the batter, i.e. the strike zone.  This is accomplished by using Newtonian Mechanics to describe the trajectory and using the Euler method to iterate through time steps to determine the placement of the ball in the z and y directions. A histogram (not shown) displays the probability that a knuckleball will strike a particular box the size of a baseball at the strike zone.',
+    description: 'A knuckleball is a pitch thrown in baseball that minimizes spin on the ball, resulting in an erratic trajectory.  This script models a knuckleball with a spectral map showing probabilistic spatial coordinates for when the ball reaches the batter\'s strike zone.  This is accomplished by using Newtonian Mechanics to describe the trajectory and using the Euler method to iterate through time steps to determine the placement of the ball in the z and y directions. A histogram (not shown) displays the probability that a knuckleball will strike a particular box the size of a baseball at the strike zone.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/knuckleball.py'
   },
   {
@@ -65,14 +65,14 @@ export const models = [
     title: 'Logistic Bifurcation Diagram',
     image: logistic,
     imageSmall: logisticSmall,
-    description: 'This program displays a bifurcation diagram mapping the logistic equation against the parameter mu. The logistic equation is defined iteravely as x_n+1 = mu * x_n (1 - x_n). For each value of mu, transient behavior of the logistic equation is eliminated and values of x_n are recorded. Chaos onset and period doubling are denoted on the diagram.',
+    description: 'This program displays a bifurcation diagram mapping the logistic equation against the parameter mu. The logistic equation is defined iteratively as x_n+1 = mu * x_n (1 - x_n). For each value of mu, transient behavior of the logistic equation is eliminated and values of x_n are recorded. Chaos onset and period doubling are denoted on the diagram.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/logistic.py'
   },
   {
     title: 'Archimedes\' Pi Approximation',
     image: pi,
     imageSmall: piSmall,
-    description: 'This script approximates the value of pi to 3 decimals using Archimedes\' method. The perimeters of two polygons are calculated, with one polygon circumscribed about a circle and the other inscribed in the same circle.  The outer perimeter is n * tan(theta/2.0), where theta is the inscribed angle in radians. The inner perimeter is defined as n * sin(theta/2.0).  As n increases, the difference between the two values will become less than 1.0E-4, resulting in pi to a precision of 3 decimals. The script prints a list of values using modulo to ensure consistency and equal column widths.',
+    description: 'This script approximates the value of pi to 3 decimals using Archimedes\' method. The perimeters of two polygons are calculated, with one polygon circumscribed about a circle and the other inscribed in the same circle.  The outer perimeter is n * tan(theta/2.0), where theta is the inscribed angle in radians. The inner perimeter is defined as n * sin(theta/2.0).  As n increases, the difference between the two values will become less than 1.0E-4, resulting in pi to a precision of 3 decimals. The script prints a list of values using the modulo operator to ensure consistency and equal column widths.',
     script: 'https://github.com/licarpen/computational-modeling/blob/master/python/pi.py'
   },
   {
