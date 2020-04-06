@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './PortfolioList.css';
 import { Link } from 'react-router-dom';
 import { models } from '../../data/models';
+import Footer from '../footer/Footer';
 
 const PortfolioList = () => {
   const portfolioItemElements = models.map(item => (
@@ -17,9 +18,12 @@ const PortfolioList = () => {
   ));
 
   return (
-    <ul className={styles.PortfolioList}>
-      {portfolioItemElements}
-    </ul>
+    <>
+      <ul className={styles.PortfolioList}>
+        {portfolioItemElements}
+      </ul>
+      <Footer />
+    </>
   );
 };
 
